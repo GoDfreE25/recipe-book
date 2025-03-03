@@ -50,7 +50,7 @@ const RecipesPage = () => {
   return (
     <Container>
       <TextField
-        label="Пошук"
+        label="Search"
         value={searchQuery}
         onChange={(e) => dispatch(setSearchQuery(e.target.value))}
         fullWidth
@@ -61,10 +61,12 @@ const RecipesPage = () => {
         onChange={(e) => dispatch(setSelectedCategory(e.target.value))}
         fullWidth
       >
-        <MenuItem value="">Всі категорії</MenuItem>
-        {categories.map((cat) => (
-          <MenuItem key={cat} value={cat}>
-            {cat}
+        <MenuItem selected value="">
+          All category
+        </MenuItem>
+        {categories.map((category) => (
+          <MenuItem key={category} value={category}>
+            {category}
           </MenuItem>
         ))}
       </Select>

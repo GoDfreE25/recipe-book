@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.typography {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  text-wrap: nowrap;
+}
+.instructions {
+  padding: 10px;
+}

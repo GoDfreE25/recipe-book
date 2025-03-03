@@ -5,8 +5,8 @@ import {
   setSearchQuery,
   setSelectedCategory,
   setCurrentPage,
-} from "../store/slice/recipesSlice";
-import { RootState, AppDispatch } from "../store/store";
+} from "../../store/slice/recipesSlice";
+import { RootState, AppDispatch } from "../../store/store";
 import {
   Container,
   Box,
@@ -19,6 +19,8 @@ import {
   MenuItem,
   Pagination,
 } from "@mui/material";
+import { Link } from "react-router-dom";
+import "./recipes-list.css";
 
 const RecipesList = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -79,20 +81,22 @@ const RecipesList = () => {
         {filteredRecipes
           .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
           .map((recipe) => (
-            <Card key={recipe.id}>
-              <CardMedia
-                component="img"
-                height="140"
-                image={recipe.thumbnail}
-                alt={recipe.name}
-              />
-              <CardContent>
-                <Typography variant="h6">{recipe.name}</Typography>
-                <Typography variant="body2">
-                  {recipe.category} - {recipe.area}
-                </Typography>
-              </CardContent>
-            </Card>
+            <Link className="link" to={`/recipeDetails/${recipe.id}`}>
+              <Card key={recipe.id}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={recipe.thumbnail}
+                  alt={recipe.name}
+                />
+                <CardContent>
+                  <Typography variant="h6">{recipe.name}</Typography>
+                  <Typography variant="body2">
+                    {recipe.category} - {recipe.area}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
       </Box>
       <Pagination

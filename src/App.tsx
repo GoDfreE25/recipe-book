@@ -1,10 +1,10 @@
+import { RecipeRoutes } from "routes/recipe-routes";
 import "./App.css";
-import RecipesList from "components/recipes-list";
 
 function App() {
   return (
     <div className="App">
-      <RecipesList />
+      <RecipeRoutes />
     </div>
   );
 }

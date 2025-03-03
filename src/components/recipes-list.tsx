@@ -20,7 +20,7 @@ import {
   Pagination,
 } from "@mui/material";
 
-const RecipesPage = () => {
+const RecipesList = () => {
   const dispatch = useDispatch<AppDispatch>();
   const {
     filteredRecipes,
@@ -105,4 +105,4 @@ const RecipesPage = () => {
   );
 };
 
-export default RecipesPage;
+export default RecipesList;

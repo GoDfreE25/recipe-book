@@ -1,6 +1,6 @@
 # Recipe
 
-- [Recipe website](https://godfree25.github.io/recipe-book)
+- [Recipe website](https://godfree25.github.io/recipe-page)
 
 ## Technologies:
 * React
